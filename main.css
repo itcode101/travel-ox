@@ -1,0 +1,71 @@
+
+const navbar = document.getElementById('navbar')
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    navbar.classList.add("active");
+  } else {
+    navbar.classList.remove("active");
+  }
+}
+
+const scrollRevealOption = {
+  distance: "50px",
+  origin: "bottom",
+  duration: 1000,
+};
+
+// header container
+ScrollReveal().reveal(".header h1", scrollRevealOption);
+
+ScrollReveal().reveal(".header h4", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".header .btn-explore", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+// about container
+ScrollReveal().reveal(".about .title", scrollRevealOption);
+ScrollReveal().reveal("..about .subtitle", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+
+ScrollReveal().reveal(".about .list", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".about .btn", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+// discover container
+ScrollReveal().reveal(".card", {
+  ...scrollRevealOption,
+  interval: 500,
+});
+
+ScrollReveal().reveal(".card .content", {
+  ...scrollRevealOption,
+  interval: 500,
+  delay: 200,
+});
+
+// blogs container
+ScrollReveal().reveal(".blogs .card", {
+  duration: 1000,
+  interval: 400,
+});
+
+// journals container
+ScrollReveal().reveal(".journals .card", {
+  ...scrollRevealOption,
+  interval: 400,
+});
